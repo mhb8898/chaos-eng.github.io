@@ -21,12 +21,13 @@ We need to identify weaknesses before they manifest in system-wide, aberrant beh
 ما باید نقاط ضعف را شناسایی کنیم قبل از آنکه به در سطح سیستم آشکار شوند، به وسیله رفتار های ناهنجار. نقاط ضعف سیستماتیک می توانند به شکل: تنظیمات برگشت خطا نامناسب در هنگام فعال نبودن سرویس، قطعی در سیستم به هنگام دریافت ترافیک زیاد در یک وابستگی سرویس، از کار افتادن پشت سر هم چندین سرویس در هنگام خطا در یک نقطه شکست مشترک، و غیره. ما بایدراهی برای مدیریت آشوب ذاتی در این سیستم ها پیدا کنیم، یک قدم برای بهتر شدن انعطاف پذیری، سرعت و داشتن اطمینان در محیط واقعی با وجود تمام پیچیدگی هایی که ارائه می‌کند.
 
 An empirical, systems-based approach addresses the chaos in distributed systems at scale and builds confidence in the ability of those systems to withstand realistic conditions.  We learn about the behavior of a distributed system by observing it during a controlled experiment.  We call this *Chaos Engineering*.
-یک آزمایش، راهکاری سیستمی که آشوب را در سیستم های توزیع شده در سطح مقیاس پذیر نشان می‌دهدو در ساختن اطمینان برای ایجاد آن ها در شرایط واقعی نقش بازی می‌کند. ما در رابطه با رفتار سیستم های توزیع شده در یک محیط کنترل شده آزمایشی مشاهداتی را انجام می‌دهیم. ما به این *مهندسی آشوب* می‌گوییم
+یک آزمایش، راهکاری سیستمی که آشوب را در سیستم های توزیع شده در سطح مقیاس پذیر نشان می‌دهد و در ساختن اطمینان برای ایجاد آن ها در شرایط واقعی نقش بازی می‌کند. ما در رابطه با رفتار سیستم های توزیع شده در یک محیط کنترل شده آزمایشی مشاهداتی را انجام می‌دهیم. ما به این *مهندسی آشوب* می‌گوییم
 
 ## CHAOS IN PRACTICE
 ## آشوب در عمل
 
 To specifically address the uncertainty of distributed systems at scale, Chaos Engineering can be thought of as the facilitation of experiments to uncover systemic weaknesses.  These experiments follow four steps:
+برای نشان دادن عدم قطعیت در سیستم های توزیع شده مقیاس پذیر، می‌توان اینگونه فکر کرد که مهندسی آشوب راهی برای آزمایش کردن راحت تر نقاط ضعف سیستم است. این چهار مورد مراحل این آزمایشات هستند:
 
 1. Start by defining ‘steady state’ as some measurable output of a system that indicates normal behavior.
 2. Hypothesize that this steady state will continue in both the control group and the experimental group.
