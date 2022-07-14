@@ -30,19 +30,29 @@ To specifically address the uncertainty of distributed systems at scale, Chaos E
 برای نشان دادن عدم قطعیت در سیستم های توزیع شده مقیاس پذیر، می‌توان اینگونه فکر کرد که مهندسی آشوب راهی برای آزمایش کردن راحت تر نقاط ضعف سیستم است. این چهار مورد مراحل این آزمایشات هستند:
 
 1. Start by defining ‘steady state’ as some measurable output of a system that indicates normal behavior.
+1. در ابتدا با تعریف 'وضعیت پایدار' شروع می‌کنیم با استفاده از تعریف چندین خروجی قابل اندازه گیری که نشان دهد سیستم به صورت طبیعی در حال کار است
 2. Hypothesize that this steady state will continue in both the control group and the experimental group.
+2. فرض می‌کنیم وضعیت پایدار در گروه آزمایشی و گروه تحت کنترل ادامه می‌یابد
 3. Introduce variables that reflect real world events like servers that crash, hard drives that malfunction, network connections that are severed, etc.
+3. متغیر هایی می‌سازیم که بودن آن هانشان دهنده اتفاقاتی در دنیای واقعی باشند که باعث ایجاد خرابی هایی مانند از هارد هایی با اشکال در عملکرد، اتصالات شبکه ای که قطع شده اند و غیره است.
 4. Try to disprove the hypothesis by looking for a difference in steady state between the control group and the experimental group.
+4. سعی می‌کنیم فرضیات مختلف را با مشاهده اختلاف های میان گروه کنترل شده و گروه مورد آزمایش رد کنیم
 
 The harder it is to disrupt the steady state, the more confidence we have in the behavior of the system.  If a weakness is uncovered, we now have a target for improvement before that behavior manifests in the system at large.
+هرچه مختل کردن شرایط پایدار سخت تر باشد، اطمینان بیشتری نسبت به پایداری در رفتار سیستم پیدا می‌کنیم. اگر یک نقطه ضعف کشف شود، مابه یک هدف جدید برای بهبود دست پیدا می‌کنیم که می‌توانیم آن را قبل از ورود به محیط وسیع‌تر رفع کنیم.
 
 ## ADVANCED PRINCIPLES
+## اصول پیشرفته
 
 The following principles describe an ideal application of Chaos Engineering, applied to the processes of experimentation described above.  The degree to which these principles are pursued strongly correlates to the confidence we can have in a distributed system at scale.
+اصول زیر نشان دهنده یک کاربرد های ویژه در مهندسی آشوب هستند. با استفاده از مراحل آزمونی که در بالا تعریف کردیم. نمره ای که در این آزمون ها کسب میکنیم به شدت در اطمینان ما از سیستم توزیع شده در مقیاس های بالا موثر است.
 
 ### Build a Hypothesis around Steady State Behavior
+### ساختن یک فرضیه پیرامون رفتار های وضعیت پایدار
+
 
 Focus on the measurable output of a system, rather than internal attributes of the system.  Measurements of that output over a short period of time constitute a proxy for the system’s steady state.  The overall system’s throughput, error rates, latency percentiles, etc. could all be metrics of interest representing steady state behavior.  By focusing on systemic behavior patterns during experiments, Chaos verifies that the system does work, rather than trying to validate how it works.
+بر روی خروجی قابل اندازه گیری یک سیستم تمرکز کنید، نسبت به ویژگی های داخلی سیستم. 
 
 ### Vary Real-world Events
 
